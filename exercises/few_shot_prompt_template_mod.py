@@ -1,8 +1,11 @@
+from dotenv import load_dotenv
 from langchain import PromptTemplate
 from langchain import FewShotPromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain import LLMChain
 
+# loading env variables
+load_dotenv()
 
 # create our examples
 examples = [

@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from decouple import config
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.agents import initialize_agent, Tool
@@ -5,6 +6,9 @@ from langchain.agents import AgentType
 from langchain.chains import RetrievalQA
 from langchain.llms import OpenAI
 from langchain.vectorstores import DeepLake
+
+# loading env variables
+load_dotenv()
 
 # get activeloop keys
 ACTIVELOOP_ORG_ID=config('ACTIVELOOP_ORG_ID')

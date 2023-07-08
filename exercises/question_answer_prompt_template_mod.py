@@ -1,6 +1,9 @@
+from dotenv import load_dotenv
 from langchain import PromptTemplate
 from langchain import HuggingFaceHub, LLMChain
 
+# loading env variables
+load_dotenv()
 
 template = """Question: {question}
 

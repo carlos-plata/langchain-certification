@@ -1,6 +1,9 @@
+from dotenv import load_dotenv
 from langchain import PromptTemplate
 from langchain import HuggingFaceHub, LLMChain
 
+# loading env variables
+load_dotenv()
 
 multi_template = """Answer the following questions one at a time.
 Questions:

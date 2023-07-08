@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from decouple import config
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.agents import initialize_agent, Tool
@@ -7,6 +8,8 @@ from langchain.llms import OpenAI
 from langchain.vectorstores import DeepLake
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
+# loading env variables
+load_dotenv()
 
 # get activeloop keys
 ACTIVELOOP_ORG_ID=config('ACTIVELOOP_ORG_ID')
